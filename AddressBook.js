@@ -1,15 +1,12 @@
 const Contact = require("./Contact.js");
 const prompt = require('prompt-sync')();
-
-// ability to add details to ContactDetails class
 var contact = new Contact();
-//Ability to add user-defined values to the PersonInfoData
-contact.firstName = prompt("Enter First Name : "); 
-contact.lastName = prompt("Enter Last Name : "); 
-contact.address = prompt("Enter Address : "); 
-contact.city = prompt("Enter City : "); 
-contact.state = prompt("Enter State : "); 
-contact.zip = prompt("Enter Zip : "); 
-contact.phoneNumber = prompt("Enter Phone Number : "); 
+contact.firstName = prompt("Enter FirstName Capital and Minimum 3 Characters : "); 
+contact.lastName = prompt("Enter LastName Capital and Minimum 3 Characters : "); 
+contact.address = prompt("Enter Address minimum 4 characters : "); 
+contact.city = prompt("Enter City minimum 4 characters : "); 
+contact.state = prompt("Enter State minimum 4 characters : "); 
+contact.zip = prompt("Enter Zip Six Digits: "); 
+contact.phoneNumber = prompt("Enter Phone Number 10 Digits: "); 
 contact.email = prompt("Enter Email : "); 
 console.log(contact.toString());
