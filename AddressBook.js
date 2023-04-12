@@ -1,12 +1,17 @@
 const Contact = require("./Contact.js");
 const prompt = require('prompt-sync')();
-var contact = new Contact();
-contact.firstName = prompt("Enter FirstName Capital and Minimum 3 Characters : "); 
-contact.lastName = prompt("Enter LastName Capital and Minimum 3 Characters : "); 
-contact.address = prompt("Enter Address minimum 4 characters : "); 
-contact.city = prompt("Enter City minimum 4 characters : "); 
-contact.state = prompt("Enter State minimum 4 characters : "); 
-contact.zip = prompt("Enter Zip Six Digits: "); 
-contact.phoneNumber = prompt("Enter Phone Number 10 Digits: "); 
-contact.email = prompt("Enter Email : "); 
+try{
+let contact = new Contact();
+contact.first=prompt("Enter FirstName Capital and Minimum 3 Characters : "); 
+contact.last=prompt("Enter LastName Capital and Minimum 3 Characters : "); 
+contact.addres = prompt("Enter Address minimum 4 characters : "); 
+contact.cityName = prompt("Enter City minimum 4 characters : "); 
+contact.stateName = prompt("Enter State minimum 4 characters : "); 
+contact.zipName = prompt("Enter Zip Six Digits: "); 
+contact.number = prompt("Enter Phone Number 10 Digits: "); 
+contact.emailId = prompt("Enter Email : ");
 console.log(contact.toString());
+} catch (e) {
+    console.error(e);
+}
+

@@ -19,25 +19,25 @@ class Contact {
 
     }
     
-    get firstName() {
+    get first() {
         return this.firstName;
     }
 
-    set firstName(firstName) {
+    set first(firstName) {
         let regex = RegExp('^[A-Z]{1}[a-z]{3,}$');
         if (regex.test(firstName)) {
             this.firstName = firstName;
         }
         else {
-           throw("Enter valid firstname");;
+           throw("Enter valid firstname");
         }
     }
 
-    get lastName() {
+    get last() {
         return this.lastName;
     }
    
-    set lastName(lastName) {
+    set last(lastName) {
         let regex = RegExp('^[A-Z]{1}[a-z]{3,}$');
         if (regex.test(lastName)) {
             this.lastName = lastName;
@@ -47,11 +47,11 @@ class Contact {
         }
     }
 
-    get address() {
+    get addres() {
         return this.address;
     }
     
-    set address(address) {
+    set addres(address) {
         let regex = RegExp('^[a-zA-z0-9]{4,}$');
         if (regex.test(address)) {
             this.address = address;
@@ -61,11 +61,11 @@ class Contact {
         }
     }
 
-    get city() {
+    get cityName() {
         return this.city;
     }
     
-    set city(city) {
+    set cityName(city) {
         let regex = RegExp('^[a-zA-z0-9]{4,}$');
         if (regex.test(city)) {
             this.city=city;
@@ -75,11 +75,11 @@ class Contact {
         }
     }
 
-    get state() {
+    get stateName() {
         return this.state;
     }
     
-    set state(state) {
+    set stateName(state) {
         let regex = RegExp('^[a-zA-z0-9]{4,}$');
         if (regex.test(state)) {
             this.state = state;
@@ -89,25 +89,25 @@ class Contact {
         }
     }
 
-    get zip() {
+    get zipName() {
         return this.zip;
     }
    
-    set zip(zip) {
+    set zipName(zip) {
         let regex = RegExp('^([0-9]{6})$');
-        if (regex.test(state)) {
-            this.state = state;
+        if (regex.test(zip)) {
+            this.zip = zip;
         }
         else {
            throw("Enter valid Zip");;
         }
     }
 
-    get phoneNumber() {
+    get number() {
         return this.phoneNumber;
     }
     
-    set phoneNumber(phoneNumber) {
+    set number(phoneNumber) {
         let regex = RegExp('^[+][0-9]{2}\\s[0-9]{10}$');
         if (regex.test(phoneNumber)) {
             this.phoneNumber = phoneNumber;
@@ -117,11 +117,11 @@ class Contact {
         }
     }
 
-    get email() {
+    get emailId() {
         return this.email;
     }
     
-    set email(email) {
+    set emailId(email) {
         let regex = RegExp('^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$');
         if (regex.test(email)) {
             this.email = email;
@@ -132,9 +132,8 @@ class Contact {
     }
 
     toString() {
-        return "FirstName = " +this.firstName + ", LastName = " +this.lastName + ", Address = "
-         +this.address + ", City = " +this.city + ", State = " +this.state + ", Zip = " +this.zip + ", PhoneNumber = " +
-         this.phoneNumber + ", Email = " +this.email;
+        return "firstName = " + this.firstName + ", lastName = " + this.lastName + ", address = " + this.address + ", city = " + this.city +
+            ", state = " + this.state + ", zip = " + this.zip + ", phoneNumber = " + this.phoneNumber + ", email = " + this.email;
     }
 }
 module.exports = Contact;
